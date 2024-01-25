@@ -1,10 +1,10 @@
 GET http://localhost:3000/todos/?status=TO%20DO
 ###
-GET http://localhost:3000/todos/?priority="LOW"
+GET http://localhost:3000/todos/?priority="HIGH"
 ###
-GET http://localhost:3000/todos/?status=TO%20DO&priority="LOW"
+GET http://localhost:3000/todos/?status=IN%20PROGRESS&priority="HIGH"
 ###
-GET http://localhost:3000/todos/search_p="washing"
+GET http://localhost:3000/todos/search_p="Play"
 ###
 GET http://localhost:3000/todos/2/
 ###

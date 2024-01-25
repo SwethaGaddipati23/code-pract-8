@@ -125,7 +125,6 @@ app.put("/todos/:todoId/", async (request, response) => {
   response.send(`${updateColumn} Updated`);
 });
 
-});
 //
 app.delete("/todos/:todoId/", async (request, response) => {
   const { todoId } = request.params;
