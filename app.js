@@ -47,16 +47,16 @@ app.get("/todos/", async (request, response) => {
   let todoQuery = "";
   switch (true) {
     case hasPriorityAndStatus(request.query):
-      todoQuery = `select * from todo where search_q like %'${search_q}'% and priority='${priority}' and status='${status}';`;
+      todoQuery = `select * from todo where search_q like '%${search_q}%' and priority='${priority}' and status='${status}';`;
       break;
     case hasStatus(request.query):
-      todoQuery = `select * from todo where search_q like %'${search_q}'% and status='${status}';`;
+      todoQuery = `select * from todo where search_q like '%${search_q}%' and status='${status}';`;
       break;
     case hasPriority(request.query):
-      todoQuery = `select * from todo where search_q like %'${search_q}'% and priority='${priority}';`;
+      todoQuery = `select * from todo where search_q like '%${search_q}%' and priority='${priority}';`;
       break;
     default:
-      todoQuery = `select * from todo where search_q like %'${search_q}'%;`;
+      todoQuery = `select * from todo where search_q like '%${search_q}%';`;
   }
   arrayResponse = await db.all(todoQuery);
   response.send(arrayResponse);
